@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "skills": [
+    {
+      "name": "tai-mode",
+      "description": "Entry point for non-trivial engineering work — read the task, match it to a playbook, delegate, verify with evidence, and report. The orchestration-loop dispatcher for this library.",
+      "path": "skills/tai-mode/SKILL.md",
+      "requires": ["skills/verify/SKILL.md"]
+    },
+    {
+      "name": "verify",
+      "description": "Verification-first principle — never report a task done on the strength of a plan, a green build, or the model's own confidence; require evidence the change actually behaves as claimed.",
+      "path": "skills/verify/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "loop",
+      "description": "Iterate on a task against a stated finish condition instead of a fixed step count — check the condition, make one justified change, verify it, keep or discard, repeat, log every decision.",
+      "path": "skills/loop/SKILL.md",
+      "requires": ["skills/verify/SKILL.md"]
+    }
+  ]
+}
