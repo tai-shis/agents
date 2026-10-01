@@ -18,6 +18,18 @@
       "description": "Iterate on a task against a stated finish condition instead of a fixed step count — check the condition, make one justified change, verify it, keep or discard, repeat, log every decision.",
       "path": "skills/loop/SKILL.md",
       "requires": ["skills/verify/SKILL.md"]
+    },
+    {
+      "name": "skill-creator",
+      "description": "Author, revise, or retire a skill of your own in this library, defining its contract, writing it to the house structure, validating it against a real task before shipping, and recording anything deliberately left out of scope. Use when adding a skill, substantially changing one, or deciding a candidate doesn't belong.",
+      "path": "skills/skill-creator/SKILL.md",
+      "requires": ["skills/verify/SKILL.md"]
+    },
+    {
+      "name": "tai-reflect",
+      "description": "Turn a correction, repeated friction, or a clearly reusable success into a durable improvement in the right place, instead of a reflex edit to a global skill. Use after being corrected, after a recurring mistake, after a review or verification failure that exposed a gap, or after a substantial task with a method worth keeping.",
+      "path": "skills/tai-reflect/SKILL.md",
+      "requires": []
     }
   ]
 }

@@ -18,6 +18,8 @@ Skills here aren't installed locally — they're fetched at task time over plain
 | [`tai-mode`](skills/tai-mode/SKILL.md) | Dispatcher — routes a task to a playbook, delegates, verifies, reports evidence. The orchestration-loop entry point. |
 | [`verify`](skills/verify/SKILL.md) | Verification-first principle: no "done" claim without runtime evidence. |
 | [`loop`](skills/loop/SKILL.md) | Iterate on a task against a stated finish condition, with a decision log. |
+| [`skill-creator`](skills/skill-creator/SKILL.md) | Author, revise, or retire a skill of your own in this library, validated before it ships. |
+| [`tai-reflect`](skills/tai-reflect/SKILL.md) | Turn a correction or reusable lesson into a durable fix in the right place, not a reflex skill edit. |
 
 ## Provenance
 
