@@ -30,6 +30,18 @@
       "description": "Turn a correction, repeated friction, or a clearly reusable success into a durable improvement in the right place, instead of a reflex edit to a global skill. Use after being corrected, after a recurring mistake, after a review or verification failure that exposed a gap, or after a substantial task with a method worth keeping.",
       "path": "skills/tai-reflect/SKILL.md",
       "requires": []
+    },
+    {
+      "name": "tai-protocol",
+      "description": "Standing collaboration rules for working with Tai, covering response formatting, language and tone, and when to ask instead of assume. Load this at the start of any session, regardless of task size. Not gated like the other skills here.",
+      "path": "skills/tai-protocol/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "asd-ste100",
+      "description": "Use when English text must be parsed without a human to resolve ambiguity: tool descriptions, error messages, inter-agent instructions, system prompts, status reports, or any text that reads dense, hedged, or easy to misparse. Triggers: disambiguate, STE100 rewrite, apply Simplified Technical English, plain-language rewrite, controlled-language rewrite. Not for creative or marketing copy.",
+      "path": "skills/asd-ste100/SKILL.md",
+      "requires": []
     }
   ]
 }

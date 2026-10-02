@@ -15,6 +15,10 @@ Authoritative protocol for discovering and loading skills from `https://co.codes
 - Never silently retry a missing file against `main` after a pinned ref 404s — that silently changes what was requested. Report the miss instead.
 - When you fetch a mutable ref, record the ref *and* the fetch time in whatever you attribute the work to — "loaded from `main`" without a timestamp is not reproducible.
 
+## Standing skill
+
+Load `skills/tai-protocol/SKILL.md` unconditionally at the start of any session, before matching any other skill to the task. It carries no entry condition of its own and is not selected by task fit the way every other skill is. It covers response formatting, language, and when to ask instead of assume, and applies regardless of task size.
+
 ## Loading a skill
 
 1. Resolve the skill's `path` through `GET /t:a/tai-shis/agents/<path>?ref=<ref>`.

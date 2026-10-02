@@ -17,3 +17,7 @@ Naming conventions and structural preferences (variable names, function shape, f
 ## Deprioritized
 
 - **Skill discovery / remote-skills equivalent.** matthew-hre's `find-skills` wraps a public marketplace CLI (`npx skills`) this library doesn't use. The closer analog is 0xhckr's `remote-skills` (catalog-fetch + dependency-resolution protocol), but most of that ground is already covered by [bootstrap/AGENTS.md](../bootstrap/AGENTS.md). Revisit only if the catalog grows large enough that matching a task to a skill from `index.json` alone stops being reliable.
+
+## Other backlog (not a skill)
+
+- **A way to customize Claude Code itself.** Tai mentioned this exists and wants it documented somewhere, but didn't say which mechanism (project `CLAUDE.md`, `settings.json`, hooks, slash commands, a plugin, something else). Needs a follow-up question before anyone acts on it. Logged here instead of guessed at.

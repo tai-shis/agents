@@ -4,7 +4,7 @@ You are either (a) an agent loading skills *from* this library over HTTP, or (b)
 
 ## (a) Loading skills from this library
 
-Fetch the catalog and follow the protocol in [bootstrap/AGENTS.md](bootstrap/AGENTS.md):
+Fetch the catalog and follow the protocol in [bootstrap/AGENTS.md](bootstrap/AGENTS.md). Load [`skills/tai-protocol/SKILL.md`](skills/tai-protocol/SKILL.md) first and unconditionally. Unlike every other skill here, it is not selected by task fit. It covers response formatting, language, and when to ask instead of assume, and applies regardless of task size.
 
 ```
 GET https://co.codes/t:a/tai-shis/agents/index.json?ref=main
@@ -27,6 +27,7 @@ This repo *is* the skill library — its own Markdown files, not app code. When 
 - `bootstrap/AGENTS.md` — the remote loading contract (protocol, not skill content).
 - `docs/` — authoring and publishing guides for contributors.
 - `skills/<name>/SKILL.md` — one skill per directory.
+- `vendor/<name>/` — skills imported from elsewhere, kept as-is. The matching `skills/<name>/SKILL.md` is a thin wrapper stating the source; see [skill-creator](skills/skill-creator/SKILL.md)'s Vendoring section.
 
 ## Attribution
 
