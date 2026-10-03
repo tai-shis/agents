@@ -32,6 +32,12 @@
       "requires": []
     },
     {
+      "name": "lint-and-format",
+      "description": "Run the project's formatter and linter on a finished chunk of work before verification and commit. If no formatter or linter is configured for a changed language, suggest one, ask before installing or configuring it, and persist the decision for later chunks.",
+      "path": "skills/lint-and-format/SKILL.md",
+      "requires": []
+    },
+    {
       "name": "tai-reflect",
       "description": "Turn a correction, repeated friction, or a clearly reusable success into a durable improvement in the right place, instead of a reflex edit to a global skill. Use after being corrected, after a recurring mistake, after a review or verification failure that exposed a gap, or after a substantial task with a method worth keeping.",
       "path": "skills/tai-reflect/SKILL.md",
