@@ -14,7 +14,7 @@ Reach for this before reporting *any* task complete — a bug fix, a feature, a 
 
 A green test suite is not verification by itself. Tests alone prove the code paths *you already thought of* behave as expected — they don't prove the actual described behavior happened. Verification means you ran the real thing and observed the real result:
 
-- A bug fix: reproduce the original failure first (so you know what "fixed" looks like), then reproduce again after the change and show it no longer fails — same repro steps, not a new happy-path check.
+- A bug fix: reproduce the original failure first (so you know what "fixed" looks like), then reproduce again after the change and show it no longer fails — same repro steps, not a new happy-path check. Capture that reproduction as a regression test where the codebase supports one, so the check outlives this task instead of living only in this report.
 - A UI/behavior change: drive the actual interface (or the actual CLI, the actual API call) and capture what happened — a screenshot, a response body, a log line — not a description of what you expect it to do.
 - A data/migration change: inspect the actual record after the operation, not just the exit code of the command that ran it.
 
