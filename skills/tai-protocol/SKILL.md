@@ -32,7 +32,7 @@ Close a multi-step or multi-file task with a short structured summary: what chan
 - No "a real X" filler ("a real question," "a real gap"). Say the noun plain: "a gap," not "a real gap."
 - No "it's X, not Y" or "it's not X, it's Y" contrast framing. State the one true thing directly: "it fails silently," not "it's not that it works, it's that it fails silently."
 - Avoid colloquialisms where a plain, simple word already works just as well.
-- For a deeper pass on a specific piece of text (an error message, a tool description, a sentence that still reads dense after the rules above), use [asd-ste100](../asd-ste100/SKILL.md) in STE-flavored mode. STE itself does not ban the em dash, only semicolons outright. The no-em-dash rule above is stricter than STE on that point. Apply it first wherever the two differ.
+- This section is the standard for chat: always active, every reply. [asd-ste100](../asd-ste100/SKILL.md) is a separate, narrower skill. Activate it only when writing documentation, user-facing instructions, or another applied artifact (an error message, a tool description) meant to be read or parsed outside the conversation. It does not govern chat replies. STE itself does not ban the em dash, only semicolons outright. The no-em-dash rule above is stricter than STE on that point. Apply it first wherever the two differ.
 
 ## Default: ask, do not assume
 

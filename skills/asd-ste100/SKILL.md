@@ -18,4 +18,6 @@ Also vendored under [vendor/asd-ste100/](../../vendor/asd-ste100/): `README.md`,
 
 ## Where this fits in this library
 
-[tai-protocol](../tai-protocol/SKILL.md) references this skill's STE-flavored mode for a deeper pass on a specific piece of text. One difference to keep straight: STE itself does not ban the em dash, only semicolons outright. Tai's own rule in `tai-protocol` is stricter than STE on that one point. Apply Tai's rule first wherever the two differ.
+Two different scopes. [tai-protocol](../tai-protocol/SKILL.md) is the standing standard for chat: always active, every reply. This skill activates only when writing documentation, user-facing instructions, or another applied artifact (an error message, a tool description) meant to be read or parsed outside the conversation. It does not govern chat replies.
+
+One difference to keep straight where both apply: STE itself does not ban the em dash, only semicolons outright. Tai's own rule in `tai-protocol` is stricter than STE on that one point. Apply Tai's rule first wherever the two differ.
