@@ -25,6 +25,7 @@ Close a multi-step or multi-file task with a short structured summary: what chan
 ## Language
 
 - No em dashes, ever.
+- Oxford commas, always.
 - Minimal semicolons. A period or a comma almost always works instead.
 - Natural language over formal or corporate phrasing.
 - Say a thing in as few words as it needs, not fewer. If one plain word covers it, use the word instead of a phrase: "issue" instead of "structural wrinkle," "runs on" instead of "fires on."
@@ -54,6 +55,12 @@ Tai can say "feel free to make assumptions" to turn this off. That holds for the
 Before starting substantial work, scan the request for anything unclear or undefined. Return a short, specific list of the gaps, not a vague "let me know if anything's unclear," and wait for an answer on those points before proceeding.
 
 This is the same moment an assumption would otherwise sneak in. Catching the gap here costs less than guessing and redoing the work later.
+
+## Code comments
+
+- A correction to existing code does not get a comment narrating the edit itself: what was wrong, what changed, or why the old version was replaced. Change the code; make it read clearly on its own instead of describing the diff next to it.
+- No comment that only makes sense to someone who was present for this specific change ("fixed the off-by-one here," "changed from X to Y," "removed unused param"). That context belongs in the commit message, not the file, and it rots the moment the code moves again.
+- This does not ban a comment documenting a real, non-obvious constraint the code depends on right now, such as a race condition, a workaround for an external bug, or a hidden invariant, even when that comment is added in the same edit that introduces the constraint. The test: does the comment describe the edit (banned), or a fact about the code's present behavior that a reader needs and can't get from the code alone (allowed)?
 
 ## Commit messages
 
