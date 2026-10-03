@@ -25,6 +25,17 @@ Skills here aren't installed locally — they're fetched at task time over plain
 | [`tai-reflect`](skills/tai-reflect/SKILL.md) | Turn a correction or reusable lesson into a durable fix in the right place, not a reflex skill edit. |
 | [`tai-protocol`](skills/tai-protocol/SKILL.md) | Standing rules for response formatting, language, and when to ask instead of assume. Loads for every session, not just non-trivial tasks. |
 | [`asd-ste100`](skills/asd-ste100/SKILL.md) | Vendored: Simplified Technical English for text an agent must parse without a human to ask. |
+| [`better-ui`](skills/better-ui/SKILL.md) | Vendored: UI polish — border radius, optical alignment, surface depth, icons, hit areas. |
+| [`better-typography`](skills/better-typography/SKILL.md) | Vendored: type scale, spacing, variable fonts, OpenType, wrapping, truncation. |
+| [`better-colors`](skills/better-colors/SKILL.md) | Vendored: color systems — palette generation, semantic tokens, format conversion, contrast. |
+| [`better-accessibility`](skills/better-accessibility/SKILL.md) | Vendored: accessibility standards and best practices. |
+| [`better-layout`](skills/better-layout/SKILL.md) | Vendored: grouping, alignment, reading order, progressive disclosure. |
+| [`better-writing`](skills/better-writing/SKILL.md) | Vendored: product copy — button labels, error messages, empty states, onboarding. |
+| [`better-interface`](skills/better-interface/SKILL.md) | Vendored: combines all `better-*` skills into one cross-discipline interface review. |
+| [`interface-review`](skills/interface-review/SKILL.md) | Vendored: scope-resolves a change (branch, diff, PR) and hands it to `better-interface`. User-invoked. |
+| [`explain-interface`](skills/explain-interface/SKILL.md) | Vendored: explains how a piece of web UI or an animation was built. User-invoked. |
+| [`break`](skills/break/SKILL.md) | Vendored: renders a component under every state and scenario on a throwaway page and stress-tests it. User-invoked. |
+| [`variant`](skills/variant/SKILL.md) | Vendored: builds multiple variants of a component to compare and pick one. User-invoked. |
 
 ## Provenance
 

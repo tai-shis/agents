@@ -60,6 +60,72 @@
       "description": "Use when English text must be parsed without a human to resolve ambiguity: tool descriptions, error messages, inter-agent instructions, system prompts, status reports, or any text that reads dense, hedged, or easy to misparse. Triggers: disambiguate, STE100 rewrite, apply Simplified Technical English, plain-language rewrite, controlled-language rewrite. Not for creative or marketing copy.",
       "path": "skills/asd-ste100/SKILL.md",
       "requires": []
+    },
+    {
+      "name": "better-ui",
+      "description": "Polishes and improves the UI in your project. Covers concentric border radius, optical alignment, surface depth, contextual icons, hit areas and more.",
+      "path": "skills/better-ui/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "better-typography",
+      "description": "Focuses on type scale, spacing, sizing, variable fonts, OpenType features, wrapping, truncation and other details that make typography feel great across your product.",
+      "path": "skills/better-typography/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "better-colors",
+      "description": "Helps you build a color system and answer anything about color in your project. You can generate palettes, use semantic tokens, convert between formats, check contrast and more.",
+      "path": "skills/better-colors/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "better-accessibility",
+      "description": "Helps your project comply with accessibility standards and best practices.",
+      "path": "skills/better-accessibility/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "better-layout",
+      "description": "Helps with grouping, alignment, reading order, progressive disclosure and other details that make a good layout.",
+      "path": "skills/better-layout/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "better-writing",
+      "description": "Focuses on improving product copy in your project.",
+      "path": "skills/better-writing/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "better-interface",
+      "description": "Combines all of the `better-*` skills into a single review across accessibility, layout, writing, typography, color and UI polish.",
+      "path": "skills/better-interface/SKILL.md",
+      "requires": ["skills/better-ui/SKILL.md", "skills/better-typography/SKILL.md", "skills/better-colors/SKILL.md", "skills/better-accessibility/SKILL.md", "skills/better-layout/SKILL.md", "skills/better-writing/SKILL.md"]
+    },
+    {
+      "name": "interface-review",
+      "description": "Reviews your work across multiple categories like UI, typography, layout, color, writing and accessibility and gives you a detailed analysis of the findings.",
+      "path": "skills/interface-review/SKILL.md",
+      "requires": ["skills/better-interface/SKILL.md"]
+    },
+    {
+      "name": "explain-interface",
+      "description": "Helps you figure out how something was built on the web.",
+      "path": "skills/explain-interface/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "break",
+      "description": "Renders a component you choose in every state and scenario on a temporary page and stress tests it.",
+      "path": "skills/break/SKILL.md",
+      "requires": []
+    },
+    {
+      "name": "variant",
+      "description": "Builds multiple variants of a component you're working on and helps you iterate and pick one.",
+      "path": "skills/variant/SKILL.md",
+      "requires": []
     }
   ]
 }
