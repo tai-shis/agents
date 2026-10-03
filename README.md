@@ -19,6 +19,7 @@ Skills here aren't installed locally — they're fetched at task time over plain
 | [`verify`](skills/verify/SKILL.md) | Verification-first principle: no "done" claim without runtime evidence. |
 | [`loop`](skills/loop/SKILL.md) | Iterate on a task against a stated finish condition, with a decision log. |
 | [`skill-creator`](skills/skill-creator/SKILL.md) | Author, revise, or retire a skill of your own in this library, validated before it ships. |
+| [`plan-first`](skills/plan-first/SKILL.md) | Before implementing a task with more than one reasonable approach, surface a short plan and get it confirmed before writing code. |
 | [`tai-reflect`](skills/tai-reflect/SKILL.md) | Turn a correction or reusable lesson into a durable fix in the right place, not a reflex skill edit. |
 | [`tai-protocol`](skills/tai-protocol/SKILL.md) | Standing rules for response formatting, language, and when to ask instead of assume. Loads for every session, not just non-trivial tasks. |
 | [`asd-ste100`](skills/asd-ste100/SKILL.md) | Vendored: Simplified Technical English for text an agent must parse without a human to ask. |

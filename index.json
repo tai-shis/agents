@@ -26,6 +26,12 @@
       "requires": ["skills/verify/SKILL.md"]
     },
     {
+      "name": "plan-first",
+      "description": "Before implementing a task with more than one reasonable approach, surface a short plan (approach, areas touched, step order) and get it confirmed before writing code. Use for a new feature, a refactor, a schema or architecture choice, or anything where picking the wrong approach costs real rework.",
+      "path": "skills/plan-first/SKILL.md",
+      "requires": []
+    },
+    {
       "name": "tai-reflect",
       "description": "Turn a correction, repeated friction, or a clearly reusable success into a durable improvement in the right place, instead of a reflex edit to a global skill. Use after being corrected, after a recurring mistake, after a review or verification failure that exposed a gap, or after a substantial task with a method worth keeping.",
       "path": "skills/tai-reflect/SKILL.md",
