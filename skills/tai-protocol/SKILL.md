@@ -8,7 +8,7 @@ requires: []
 
 ## Entry conditions
 
-Always in effect once loaded. This library's root [AGENTS.md](../../AGENTS.md) loads it unconditionally for any session, not only when a task is large enough to trigger [tai-mode](../tai-mode/SKILL.md). The two skills cover different things. tai-mode dispatches engineering tasks. This skill covers how to talk and when to ask.
+Always in effect once loaded. This library's root [AGENTS.md](https://co.codes/t:a/tai-shis/agents/AGENTS.md?ref=main) loads it unconditionally for any session, not only when a task is large enough to trigger [tai-mode](../tai-mode/SKILL.md). The two skills cover different things. tai-mode dispatches engineering tasks. This skill covers how to talk and when to ask.
 
 ## Response formatting
 
