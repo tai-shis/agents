@@ -39,7 +39,7 @@
     },
     {
       "name": "debug",
-      "description": "Hypothesis-driven root-cause investigation for a bug, test failure, crash, or unexpected output that doesn't have an obvious cause. Reproduce it, narrow to the first point where expected and actual behavior diverge, and confirm the cause before touching a fix.",
+      "description": "Hypothesis-driven root-cause investigation for a bug, test failure, crash, or unexpected output that doesn't have an obvious cause. Reproduce it, narrow to the first point where expected and actual behavior diverge, and confirm the cause before touching a fix. Not for adding a feature or change near a known bug.",
       "path": "skills/debug/SKILL.md",
       "requires": []
     },
