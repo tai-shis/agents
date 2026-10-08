@@ -38,6 +38,12 @@
       "requires": []
     },
     {
+      "name": "debug",
+      "description": "Hypothesis-driven root-cause investigation for a bug, test failure, crash, or unexpected output that doesn't have an obvious cause. Reproduce it, narrow to the first point where expected and actual behavior diverge, and confirm the cause before touching a fix.",
+      "path": "skills/debug/SKILL.md",
+      "requires": []
+    },
+    {
       "name": "coding-practices",
       "description": "Language-agnostic code design and structure conventions: function responsibility and naming, control flow shape, readability over cleverness, and when code should explain itself instead of needing a comment. Apply whenever writing or substantially editing code, in any language. Language-specific syntax, casing, and formatting are out of scope.",
       "path": "skills/coding-practices/SKILL.md",
