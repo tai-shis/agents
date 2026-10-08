@@ -36,6 +36,7 @@ Skills here aren't installed locally — they're fetched at task time over plain
 | [`explain-interface`](skills/explain-interface/SKILL.md) | Vendored: explains how a piece of web UI or an animation was built. User-invoked. |
 | [`break`](skills/break/SKILL.md) | Vendored: renders a component under every state and scenario on a throwaway page and stress-tests it. User-invoked. |
 | [`variant`](skills/variant/SKILL.md) | Vendored: builds multiple variants of a component to compare and pick one. User-invoked. |
+| [`typesafe-ai`](skills/typesafe-ai/SKILL.md) | Vendored: building features with TypeSafe System One models (typed judgments for routing, ranking, extraction, verification). |
 
 ## Provenance
 

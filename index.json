@@ -126,6 +126,12 @@
       "description": "Builds multiple variants of a component you're working on and helps you iterate and pick one.",
       "path": "skills/variant/SKILL.md",
       "requires": []
+    },
+    {
+      "name": "typesafe-ai",
+      "description": "Builds AI-powered features with TypeSafe, small System One models that return typed judgments and probabilities code can combine. Use when a feature needs programmable common sense, such as routing, ranking, extraction, or verification.",
+      "path": "skills/typesafe-ai/SKILL.md",
+      "requires": []
     }
   ]
 }
