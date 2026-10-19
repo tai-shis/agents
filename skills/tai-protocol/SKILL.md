@@ -61,7 +61,9 @@ This is the same moment an assumption would otherwise sneak in. Catching the gap
 
 - A correction to existing code does not get a comment narrating the edit itself: what was wrong, what changed, or why the old version was replaced. Change the code; make it read clearly on its own instead of describing the diff next to it.
 - No comment that only makes sense to someone who was present for this specific change ("fixed the off-by-one here," "changed from X to Y," "removed unused param"). That context belongs in the commit message, not the file, and it rots the moment the code moves again.
-- This does not ban a comment documenting a real, non-obvious constraint the code depends on right now, such as a race condition, a workaround for an external bug, or a hidden invariant, even when that comment is added in the same edit that introduces the constraint. The test: does the comment describe the edit (banned), or a fact about the code's present behavior that a reader needs and can't get from the code alone (allowed)?
+- This does not ban a comment documenting a real, non-obvious constraint the code depends on right now, such as a race condition, a workaround for an external bug, or a rule the code silently depends on, even when that comment is added in the same edit that introduces the constraint. The test: does the comment describe the edit (banned), or a fact about the code's present behavior that a reader needs and can't get from the code alone (allowed)?
+- Write comments for whoever reads the code next. Never reference the chat, the prompt, the task, the user, "we", or the reasoning from the current session. That context is invisible to every future reader of the file.
+- When a comment is justified, keep it to the single fact that is strictly necessary. Leave out the rationale, the history, the alternatives weighed, and why the previous version was wrong.
 
 ## Commit messages
 
