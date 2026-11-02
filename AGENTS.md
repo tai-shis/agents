@@ -19,7 +19,8 @@ This repo *is* the skill library — its own Markdown files, not app code. When 
 1. Read [docs/loading.md](docs/loading.md) for the authoring contract (frontmatter shape, portability rules, format).
 2. Read [docs/publishing.md](docs/publishing.md) before pushing.
 3. Keep [index.json](index.json) in sync with whatever's under `skills/` — every skill referenced there needs an entry, and vice versa.
-4. Skills must work when fetched cold over HTTP by an agent with no other context on this repo. Don't write a skill that assumes the reader has this whole repo checked out.
+4. Keep the skills table in [README.md](README.md) in sync the same way. Add a row for a new skill, and update or remove the row when a skill's purpose changes or it's retired.
+5. Skills must work when fetched cold over HTTP by an agent with no other context on this repo. Don't write a skill that assumes the reader has this whole repo checked out.
 
 ## Layout
 
