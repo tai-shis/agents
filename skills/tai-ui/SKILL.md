@@ -39,7 +39,7 @@ Evidence: the restated requirement and the list of what the UI needs, with open 
 ### 2. Map it onto the codebase
 
 1. **Find where it goes.** Locate the route, page, or feature module it belongs in, and look at how neighboring features are built: folder layout, data fetching, state management, and error handling. Follow those patterns.
-2. **Find what exists.** Search for components, primitives, design tokens, hooks, and data utilities that already do part of the job, and for a similar feature to use as a model.
+2. **Find what exists.** If the project root has a `DESIGN.md`, read it first and treat it as the project's design system, including its rules for page composition. Search for components, primitives, design tokens, hooks, and data utilities that already do part of the job, and for a similar feature to use as a model.
 3. **Break the UI into pieces from the top down, and give each one a level:**
    - **Page:** one route, filled with real content.
    - **Layout:** page structure shared by two or more pages, with slots and no real content. With one page, keep the structure in the page and skip this level.
@@ -119,6 +119,7 @@ Does not run break, variant, or interface-review without the user's explicit yes
 - **The requirement conflicts with how the app already works** (an existing flow, a permission model, a data contract). Stop and describe the conflict. Do not resolve it silently in either direction.
 - **The data the UI needs does not exist yet** (no endpoint, no field). Say so. Build against a clearly marked fixture only if the user agrees, and list it as open in the report.
 - **A `better-*` rule conflicts with the project's design system.** Follow the design system, and name the conflict in the report so the user can decide whether to change it.
+- **`DESIGN.md` disagrees with the code,** such as a token value that differs from the theme. If its Known Drift section lists the difference, follow `DESIGN.md` for new code, and leave the old code alone unless the requirement covers it. Otherwise stop and name the difference. Do not pick one silently or update either to match.
 - **A piece cannot be built in isolation.** Build it in the app, and say why in the report.
 - **A page needs an override to look right.** Treat it as a defect in the lower piece and fix it there. If that change is out of scope, for example because it reaches consumers the requirement does not cover, list it as open in the report.
 - **A checkpoint skill finds a problem.** Fix it, re-run the verification from step 6 for the affected part, and list the fix in the report.

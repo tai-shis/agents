@@ -152,6 +152,12 @@
       "requires": ["skills/verify/SKILL.md"]
     },
     {
+      "name": "design-md",
+      "description": "Create or revise a project's DESIGN.md, the file that tells coding agents how its UI should look and how its pages should be composed. Works from scratch through an interview, from an existing repository by extracting its design system, or from repeated design corrections. Not for building UI from an existing DESIGN.md, or for one-off color, type, or layout questions.",
+      "path": "skills/design-md/SKILL.md",
+      "requires": ["skills/verify/SKILL.md"]
+    },
+    {
       "name": "tai-components",
       "description": "Conventions for structuring and writing React and Next.js components styled with Tailwind, covering component levels, file layout, one job per component, props API design, state ownership, server and client components, and styling with tokens. Apply whenever writing or substantially editing a component, small edits included. Not for other frameworks or for visual design rules, which belong to the better-* skills.",
       "path": "skills/tai-components/SKILL.md",

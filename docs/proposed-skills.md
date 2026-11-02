@@ -21,6 +21,7 @@ These skills shipped without [skill-creator](../skills/skill-creator/SKILL.md)'s
 - [storybook](../skills/storybook/SKILL.md)
 - [tai-ui](../skills/tai-ui/SKILL.md)
 - [tai-components](../skills/tai-components/SKILL.md)
+- [design-md](../skills/design-md/SKILL.md): partly validated. Fresh-agent walkthroughs covered every mode and the near-miss and missing-prerequisite checks, but its two external steps have never run: the linter (step 6) and the with-and-without comparison (step 7).
 
 ## Deprioritized
 
