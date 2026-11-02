@@ -1,6 +1,6 @@
 ---
 name: storybook
-description: Build and verify React and Next.js UI components in Storybook, isolated from the running app. Write one story per reachable state, keep the preview matching the app, cover behavior with interaction tests, and check appearance against visual regression baselines. If the project has no Storybook, suggest it, ask before setting it up, and persist the decision. Not for other frameworks or for pages that only work with live app data.
+description: Build and verify React and Next.js UI components in Storybook, isolated from the running app. Write one story per reachable state, title stories by component level, keep the preview matching the app, cover behavior with interaction tests, and check appearance against visual regression baselines. If the project has no Storybook, suggest it, ask before setting it up, and persist the decision. Not for other frameworks or for pages that only work with live app data.
 requires: [skills/verify/SKILL.md]
 ---
 
@@ -13,7 +13,7 @@ Reach for this when creating or changing a React component that renders UI, in a
 It does not apply to:
 
 - Other frameworks (Svelte, Vue, Angular). Say the skill does not cover the stack and verify the component in the running app instead, per [verify](../verify/SKILL.md).
-- Full pages or route-level components wired to server data, auth, or routing. Verify those in the running app. Their presentational children still get stories.
+- Full pages or route-level components wired to server data, auth, or routing. Verify those in the running app, including a route `layout.tsx`. Their presentational children and any shared layout component still get stories.
 - Stress testing a finished component with worst-case content inside the app. That is [break](../break/SKILL.md). Exploring design alternatives in place is [variant](../variant/SKILL.md).
 
 ## Use what the project already has
@@ -52,11 +52,21 @@ Evidence: open a story of an existing component and the same component in the ru
 ## Write stories
 
 - Put stories in `stories/components/` at the project root, mirroring the component's path under `components/`: `components/billing/InvoiceTable.tsx` has `stories/components/billing/InvoiceTable.stories.tsx`. Make sure the Storybook config's stories pattern includes that folder. If the project already puts stories somewhere else, follow the project. See [tai-components](../tai-components/SKILL.md) for the full file layout.
-- Use Component Story Format 3: a default export `meta` object with `component`, and one named export per story with `args`. Type them with `satisfies Meta<typeof Component>` and `StoryObj<typeof meta>`.
+- Use Component Story Format 3: a default export `meta` object with `title` and `component`, and one named export per story with `args`. Type them with `satisfies Meta<typeof Component>` and `StoryObj<typeof meta>`.
+- Build each `title` as `<Level>/<folders under components/>/<ComponentName>`, using the component levels defined in [tai-components](../tai-components/SKILL.md). Primitives leave out the `ui` folder. For example: `components/ui/Button.tsx` is `Primitives/Button`, `components/invoices/SearchField.tsx` is `Composites/Invoices/SearchField`, `components/billing/InvoiceTable.tsx` is `Sections/Billing/InvoiceTable`, and `components/dashboard/DashboardLayout.tsx` is `Layouts/Dashboard/DashboardLayout`. Only `components/ui/` encodes a level, so set the title explicitly instead of relying on one generated from the path. The sidebar then works as the inventory of the system. If an existing Storybook has its own title convention, follow it and do not retitle its stories. Changing a title changes the story ID, so delete the old baseline, generate a new one for that story, and look at it before committing.
 - Write one story per state the component can actually reach. Read the props, slots, and internal states to decide which ones: default, each variant, disabled, loading, empty, error, and long or missing content where the props allow it. Do not add a story for a state the props cannot produce.
+- Focus coverage on what each level adds, using the table below. An unexported subcomponent has no stories of its own. Its parent's stories cover it.
 - Name each story after its state, so the story list reads as a state inventory.
 - Pass values through `args`, not hardcoded JSX, so controls work and stories stay small.
 - Keep fixture data deterministic: fixed dates and fixed IDs. No `Math.random()`, `Date.now()`, or live data. Visual regression depends on it.
+
+| Level | Stories focus on |
+|-------|------------------|
+| Primitive | Every variant and state |
+| Composite | Every state, plus how the primitives interact |
+| Section | How its parts fit together, and each data state passed in through props |
+| Layout | Placeholder content in each slot, at a narrow and a wide viewport. A route `layout.tsx` has no stories |
+| Page | No stories. Verify it in the running app |
 
 | Bad | Good |
 |-----|------|
@@ -119,4 +129,4 @@ Does not install or configure anything without approval, update a baseline nobod
 
 ## Completion criteria
 
-Every new or changed component has stories for each state it can reach, static Storybook builds, interaction tests pass, visual regression passes or every diff is reviewed and justified, screenshot evidence is in the report, and any tooling decision made along the way is recorded where a later session will see it.
+Every new or changed exported component below page level, other than a route `layout.tsx`, has stories for each state it can reach, titled by level unless the project has its own title convention, static Storybook builds, interaction tests pass, visual regression passes or every diff is reviewed and justified, screenshot evidence is in the report, and any tooling decision made along the way is recorded where a later session will see it.

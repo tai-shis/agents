@@ -141,19 +141,19 @@
     },
     {
       "name": "storybook",
-      "description": "Build and verify React and Next.js UI components in Storybook, isolated from the running app. Write one story per reachable state, keep the preview matching the app, cover behavior with interaction tests, and check appearance against visual regression baselines. If the project has no Storybook, suggest it, ask before setting it up, and persist the decision. Not for other frameworks or for pages that only work with live app data.",
+      "description": "Build and verify React and Next.js UI components in Storybook, isolated from the running app. Write one story per reachable state, title stories by component level, keep the preview matching the app, cover behavior with interaction tests, and check appearance against visual regression baselines. If the project has no Storybook, suggest it, ask before setting it up, and persist the decision. Not for other frameworks or for pages that only work with live app data.",
       "path": "skills/storybook/SKILL.md",
       "requires": ["skills/verify/SKILL.md"]
     },
     {
       "name": "tai-ui",
-      "description": "Workflow for implementing a UI requirement in an existing codebase, such as a new feature, screen, or flow, or a substantial change to existing UI, in any frontend stack. Work out what the UI needs, map it onto what already exists, build or extend the pieces, integrate them with real data and navigation, and verify the whole flow. Applies the better-* standards while writing and offers the user-invoked break, variant, and interface-review at checkpoints. Not for small tweaks to existing UI.",
+      "description": "Workflow for implementing a UI requirement in an existing codebase, such as a new feature, screen, or flow, or a substantial change to existing UI, in any frontend stack. Work out what the UI needs, break it into levels from primitives up to the page, map those onto what already exists, build or extend the pieces from the smallest up, integrate them with real data and navigation, and verify the whole flow. Applies the better-* standards while writing and offers the user-invoked break, variant, and interface-review at checkpoints. Not for small tweaks to existing UI.",
       "path": "skills/tai-ui/SKILL.md",
       "requires": ["skills/verify/SKILL.md"]
     },
     {
       "name": "tai-components",
-      "description": "Conventions for structuring and writing React and Next.js components styled with Tailwind, covering file layout, one job per component, props API design, state ownership, server and client components, and styling with tokens. Apply whenever writing or substantially editing a component, small edits included. Not for other frameworks or for visual design rules, which belong to the better-* skills.",
+      "description": "Conventions for structuring and writing React and Next.js components styled with Tailwind, covering component levels, file layout, one job per component, props API design, state ownership, server and client components, and styling with tokens. Apply whenever writing or substantially editing a component, small edits included. Not for other frameworks or for visual design rules, which belong to the better-* skills.",
       "path": "skills/tai-components/SKILL.md",
       "requires": ["skills/coding-practices/SKILL.md"]
     }

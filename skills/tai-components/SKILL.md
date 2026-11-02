@@ -1,6 +1,6 @@
 ---
 name: tai-components
-description: Conventions for structuring and writing React and Next.js components styled with Tailwind, covering file layout, one job per component, props API design, state ownership, server and client components, and styling with tokens. Apply whenever writing or substantially editing a component, small edits included. Not for other frameworks or for visual design rules, which belong to the better-* skills.
+description: Conventions for structuring and writing React and Next.js components styled with Tailwind, covering component levels, file layout, one job per component, props API design, state ownership, server and client components, and styling with tokens. Apply whenever writing or substantially editing a component, small edits included. Not for other frameworks or for visual design rules, which belong to the better-* skills.
 requires: [skills/coding-practices/SKILL.md]
 ---
 
@@ -25,10 +25,34 @@ It does not cover:
 
 - Components live in `components/` under the app directory: `app/components/`, or `src/app/components/` if the project uses `src/`.
 - `components/ui/` holds primitives only (`Button`, `Dialog`, `Input`). It is the default install location for UI library components (shadcn, coss, and similar), so keep it for those and for primitives written in the same role. Leave library-installed files where the library's tooling put them.
-- Everything else goes in `components/<subcategory>/`, named for the feature or category it belongs to, and nested further when a category grows: `components/billing/InvoiceTable.tsx`, `components/billing/invoices/InvoiceRow.tsx`.
+- Everything else goes in whatever structure reads best for the project, usually `components/<subcategory>/`, named for the feature or category it belongs to, and nested further when a category grows: `components/billing/InvoiceTable.tsx`, `components/billing/invoices/InvoiceRow.tsx`. Do not add folders named after levels (`composites/`, `sections/`, `layouts/`).
 - Stories live in `stories/components/` at the project root, and tests in `tests/components/`. Both mirror the path under `components/`: `components/billing/InvoiceTable.tsx` has `stories/components/billing/InvoiceTable.stories.tsx` and `tests/components/billing/InvoiceTable.test.tsx`.
 - One exported component per file, and the file is named after it in PascalCase (`InvoiceTable.tsx`). Library-installed files in `components/ui/` keep the library's naming. A small subcomponent used only by that file can stay in it, unexported.
 - When a component moves or is deleted, move or delete its story and test with it.
+
+## Component levels
+
+Every component sits at one level, and the level decides what it may import and where its data comes from. Only primitives have a fixed location.
+
+| Level | Test | Examples | Data |
+|-------|------|----------|------|
+| **Primitive** | Wraps one native element, or is installed from a UI library, and has no domain knowledge. A library-installed component counts as a primitive, whatever it renders internally. Lives in `components/ui/`. | `Button`, `Input`, `Dialog` | Props only |
+| **Composite** | A few primitives or native elements doing one job. | `FormField`, `SearchField` | Props only |
+| **Section** | A distinct section of the interface, whether it uses composites and primitives or native elements directly. A piece that stands alone on the page is a section, even when it is simple. | `SiteHeader`, `InvoiceTable` | Props by default, or a hook when it must own its data |
+| **Layout** | Page structure shared by two or more pages, with slots and no real content. | `DashboardLayout`, a shared `layout.tsx` | Slots and props only |
+| **Page** | One route, filled with real content. | `page.tsx` | Fetches and passes data down |
+
+- **Imports go sideways or down.** Page, layout, section, composite, primitive, in that order. A component may import from its own level or any lower level, with no import cycles. If a composite needs a section, it is a section itself, or the section's content belongs in a slot. This rule covers components only. Any level may import types and utilities from outside `components/`, as long as it still gets its data as the table allows.
+- **Pieces without their own test take a level from where they run.** An unexported subcomponent has the level of its file. Next.js route files such as `loading.tsx` and `error.tsx` are page level, except a shared `layout.tsx`, which is a layout.
+- **Create a layout only when pages share structure.** With one page, keep the structure in the page. Add the layout when a second page needs it.
+- **Create pieces only when the work needs them.** Do not build out primitives or composites in advance. Keep a piece in the folder of the feature that uses it, and move it somewhere shared when another feature needs it.
+- **Do not debate borderline levels.** Choose the lowest level whose test fits, and move on.
+
+| Bad | Good |
+|-----|------|
+| `components/ui/Button.tsx` imports `SiteHeader` to read the current section | `Button` takes the value as a prop from the section or page that knows it |
+| `components/composites/SearchField.tsx` | `components/invoices/SearchField.tsx` |
+| `InvoicesLayout` used only by the invoices page | The invoices page holds its own structure until a second page shares it |
 
 ## One job per component
 
@@ -84,8 +108,9 @@ Does not migrate existing components to these conventions unasked, add dependenc
 
 - **The project's convention conflicts with a rule here.** Follow the project. Name the difference in the report only if it caused a problem.
 - **An existing component needs restructuring to take a change cleanly** (it fetches its own data, or it has grown boolean variant flags). Make the change in the existing shape, and suggest the restructure separately instead of doing it as part of an unrelated change.
+- **An existing component imports from a higher level.** Do not fix it as part of an unrelated change. Make the change in the existing shape, and suggest the fix separately.
 - **A rule here and a `better-*` skill seem to conflict.** The `better-*` skill decides what the user sees. This skill decides how the code is organized to produce it.
 
 ## Completion criteria
 
-Every component written or changed is in the right location with its story and test paths mirrored, does one job, keeps data fetching out of presentational components, uses string unions for variants and composition for content, passes `className`, `ref`, and native props through where it wraps a native element, keeps state low and not derived, marks only the smallest needed components as client components, and styles with theme tokens and a merged `className`, unless the project's own conventions say otherwise.
+Every component written or changed is in the right location with its story and test paths mirrored, imports only from its own level or lower, gets its data as its level allows, does one job, keeps data fetching out of presentational components, uses string unions for variants and composition for content, passes `className`, `ref`, and native props through where it wraps a native element, keeps state low and not derived, marks only the smallest needed components as client components, and styles with theme tokens and a merged `className`, unless the project's own conventions say otherwise.

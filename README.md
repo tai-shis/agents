@@ -25,9 +25,9 @@ Skills here aren't installed locally — they're fetched at task time over plain
 | [`coding-practices`](skills/coding-practices/SKILL.md) | Language-agnostic code design: function responsibility and naming, guard clauses, readability over cleverness, self-explanatory code. |
 | [`tai-reflect`](skills/tai-reflect/SKILL.md) | Turn a correction or reusable lesson into a durable fix in the right place, not a reflex skill edit. |
 | [`tai-protocol`](skills/tai-protocol/SKILL.md) | Standing rules for response formatting, language, and when to ask instead of assume. Loads for every session, not just non-trivial tasks. |
-| [`tai-ui`](skills/tai-ui/SKILL.md) | Workflow for implementing a UI requirement: understand it, map it onto existing code, build, integrate, and verify the whole flow. Offers `break`, `variant`, and `interface-review` at checkpoints. |
-| [`tai-components`](skills/tai-components/SKILL.md) | React and Next.js component conventions with Tailwind: file layout, props API, state, server and client components, styling with tokens. |
-| [`storybook`](skills/storybook/SKILL.md) | Build and verify React and Next.js components in Storybook, with interaction tests and visual regression. Suggests and sets up Storybook if missing, asking first. |
+| [`tai-ui`](skills/tai-ui/SKILL.md) | Workflow for implementing a UI requirement: understand it, break it into levels from primitives up to the page, map those onto existing code, build from the smallest up, integrate, and verify the whole flow. Offers `break`, `variant`, and `interface-review` at checkpoints. |
+| [`tai-components`](skills/tai-components/SKILL.md) | React and Next.js component conventions with Tailwind: component levels, file layout, props API, state, server and client components, styling with tokens. |
+| [`storybook`](skills/storybook/SKILL.md) | Build and verify React and Next.js components in Storybook, titled by component level, with interaction tests and visual regression. Suggests and sets up Storybook if missing, asking first. |
 | [`asd-ste100`](skills/asd-ste100/SKILL.md) | Vendored: Simplified Technical English for text an agent must parse without a human to ask. |
 | [`better-ui`](skills/better-ui/SKILL.md) | Vendored: UI polish — border radius, optical alignment, surface depth, icons, hit areas. |
 | [`better-typography`](skills/better-typography/SKILL.md) | Vendored: type scale, spacing, variable fonts, OpenType, wrapping, truncation. |

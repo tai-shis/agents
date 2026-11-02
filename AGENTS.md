@@ -33,3 +33,5 @@ This repo *is* the skill library — its own Markdown files, not app code. When 
 ## Attribution
 
 Skills here draw on the pstack methodology (verification-first agent work, mode-based dispatch) originated by [@poteto](https://x.com/poteto) (Lauren Tan) — adapted, not copied, for this library's own protocol and conventions.
+
+The component levels in the UI skills ([tai-components](skills/tai-components/SKILL.md), [tai-ui](skills/tai-ui/SKILL.md), [storybook](skills/storybook/SKILL.md)) adapt Brad Frost's atomic design under plainer names (primitive, composite, section, layout, and page).
