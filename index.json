@@ -138,6 +138,12 @@
       "description": "Builds AI-powered features with TypeSafe, small System One models that return typed judgments and probabilities code can combine. Use when a feature needs programmable common sense, such as routing, ranking, extraction, or verification.",
       "path": "skills/typesafe-ai/SKILL.md",
       "requires": []
+    },
+    {
+      "name": "storybook",
+      "description": "Build and verify React and Next.js UI components in Storybook, isolated from the running app. Write one story per reachable state, keep the preview matching the app, cover behavior with interaction tests, and check appearance against visual regression baselines. If the project has no Storybook, suggest it, ask before setting it up, and persist the decision. Not for other frameworks or for pages that only work with live app data.",
+      "path": "skills/storybook/SKILL.md",
+      "requires": ["skills/verify/SKILL.md"]
     }
   ]
 }
