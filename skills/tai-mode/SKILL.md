@@ -16,7 +16,7 @@ Reach for this whenever a task is more than a one-line edit: a bug fix, a featur
 2. **Match a playbook**, i.e. the shape of steps + verification that classification implies:
    - *Investigation-only*: understand and report; do not implement. Stop at a root cause or an answer, not a fix.
    - *Bug fix*: reproduce first, so "fixed" is checkable; fix; reproduce again to confirm — see [verify](../verify/SKILL.md). If the cause isn't obvious on sight, see [debug](../debug/SKILL.md) for narrowing to it before touching a fix.
-   - *Feature*: if there's more than one reasonable way to build it, surface a plan first — see [plan-first](../plan-first/SKILL.md) — then build against the smallest real version of the use case and verify the actual behavior, not just that it compiles.
+   - *Feature*: if there's more than one reasonable way to build it, surface a plan first — see [plan-first](../plan-first/SKILL.md) — then build against the smallest real version of the use case and verify the actual behavior, not just that it compiles. For a feature that needs UI work, follow [tai-ui](../tai-ui/SKILL.md).
    - *Refactor*: if there's more than one viable strategy, surface a plan first — see [plan-first](../plan-first/SKILL.md). Behavior must not change — verification here means showing the *before* and *after* produce the same observable result, not just that tests still pass.
    - *Doesn't fit*: say so, propose a short custom sequence of steps for this specific task, and check it against the person before running far with it.
 3. **Work the playbook.** Delegate sub-parts if the task decomposes cleanly into independent pieces; otherwise work it directly.
