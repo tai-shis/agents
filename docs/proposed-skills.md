@@ -10,9 +10,17 @@ A personal voice-and-phrasing skill: Bad/Good comparison-table format (per [skil
 
 ## Coding practices
 
-Naming conventions and structural preferences (variable names, function shape, file organization). Likely an atomic `rules/` directory (one topic per file, per [skill-creator](../skills/skill-creator/SKILL.md)'s progressive-disclosure allowance) rather than one monolith, since this will grow unevenly across languages and domains (matthew-hre's `vercel-react-best-practices/rules/` is the model).
+Mostly covered now. [coding-practices](../skills/coding-practices/SKILL.md) holds the language-agnostic rules (naming, function shape, file organization), and [tai-components](../skills/tai-components/SKILL.md) holds React and Next.js component conventions. What's left is conventions for other languages and stacks, written as their own skills or as an atomic `rules/` directory (one topic per file, per [skill-creator](../skills/skill-creator/SKILL.md)'s progressive-disclosure allowance) if they grow unevenly (matthew-hre's `vercel-react-best-practices/rules/` is the model).
 
-**Status:** waiting on concrete code examples from Tai before drafting.
+**Status:** waiting on a language or stack that needs its own conventions.
+
+## Not yet validated
+
+These skills shipped without [skill-creator](../skills/skill-creator/SKILL.md)'s validation checks (representative task, near-miss task, missing prerequisite). Run those checks on first real use, fix any gaps found, and remove the skill from this list.
+
+- [storybook](../skills/storybook/SKILL.md)
+- [tai-ui](../skills/tai-ui/SKILL.md)
+- [tai-components](../skills/tai-components/SKILL.md)
 
 ## Deprioritized
 
