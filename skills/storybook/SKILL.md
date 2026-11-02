@@ -51,7 +51,7 @@ Evidence: open a story of an existing component and the same component in the ru
 
 ## Write stories
 
-- Put the story file next to the component (`Button.stories.tsx` beside `Button.tsx`), unless the project puts stories elsewhere.
+- Put stories in `stories/components/` at the project root, mirroring the component's path under `components/`: `components/billing/InvoiceTable.tsx` has `stories/components/billing/InvoiceTable.stories.tsx`. Make sure the Storybook config's stories pattern includes that folder. If the project already puts stories somewhere else, follow the project. See [tai-components](../tai-components/SKILL.md) for the full file layout.
 - Use Component Story Format 3: a default export `meta` object with `component`, and one named export per story with `args`. Type them with `satisfies Meta<typeof Component>` and `StoryObj<typeof meta>`.
 - Write one story per state the component can actually reach. Read the props, slots, and internal states to decide which ones: default, each variant, disabled, loading, empty, error, and long or missing content where the props allow it. Do not add a story for a state the props cannot produce.
 - Name each story after its state, so the story list reads as a state inventory.
