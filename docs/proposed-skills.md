@@ -22,6 +22,7 @@ These skills shipped without [skill-creator](../skills/skill-creator/SKILL.md)'s
 - [tai-ui](../skills/tai-ui/SKILL.md)
 - [tai-components](../skills/tai-components/SKILL.md)
 - [design-md](../skills/design-md/SKILL.md): partly validated. Fresh-agent walkthroughs covered every mode and the near-miss and missing-prerequisite checks, but its two external steps have never run: the linter (step 6) and the with-and-without comparison (step 7).
+- [tai-setup](../skills/tai-setup/SKILL.md): partly validated. Its commands ran end to end on NixOS `x86_64-linux` on the shadcn and Postgres path, and the coss path ran through the icon rewrite and build. No fresh agent has followed it, and the near-miss and missing-prerequisite checks are unrun. Other systems in the flake and non-Postgres databases are untested.
 
 ## Deprioritized
 
@@ -30,5 +31,5 @@ These skills shipped without [skill-creator](../skills/skill-creator/SKILL.md)'s
 ## Other backlog (not a skill)
 
 - **A way to customize Claude Code itself.** Tai mentioned this exists and wants it documented somewhere, but didn't say which mechanism (project `CLAUDE.md`, `settings.json`, hooks, slash commands, a plugin, something else). Needs a follow-up question before anyone acts on it. Logged here instead of guessed at.
-- **Portless as the standard for local dev environments.** Replaces `localhost:PORT` with stable `.localhost` URLs; auto-detects frameworks that ignore `PORT` (Vite, Astro, Angular); prepends branch names as subdomains inside a git worktree, which matters here since parallel agent runs on the same project would otherwise collide on random ports. Adopt as the default way to start a dev server, not a skill of its own.
+- **Portless as the standard for local dev environments.** Tested and left out of [tai-setup](../skills/tai-setup/SKILL.md) for now. See [the out-of-scope note](out-of-scope/tai-setup-portless.md) for the findings and what would reopen it.
 - **ADR generation — deferred, framed for personal use.** For personal/small-scale projects, skip formal ADR tooling: a decision log in a plain `docs/` folder, written arbitrarily as needed, is enough. Revisit this once there's an actual industry/team project in scope, where audience and stakes change what a decision record needs to do. Don't build ADR tooling before that need is real.

@@ -162,6 +162,12 @@
       "description": "Conventions for structuring and writing React and Next.js components styled with Tailwind, covering component levels, file layout, one job per component, props API design, state ownership, server and client components, and styling with tokens. Apply whenever writing or substantially editing a component, small edits included. Not for other frameworks or for visual design rules, which belong to the better-* skills.",
       "path": "skills/tai-components/SKILL.md",
       "requires": ["skills/coding-practices/SKILL.md"]
+    },
+    {
+      "name": "tai-setup",
+      "description": "Set up a new repository, or explicitly establish this setup in an existing one, with a Nix flake dev shell and direnv, then the default web and backend stack where the project needs it, covering Next.js, shadcn or coss, Phosphor icons, Storybook, Vitest, Playwright, Zod, and Drizzle. Scope the project and ask about open choices first. Not for ordinary work in a repository that is already set up.",
+      "path": "skills/tai-setup/SKILL.md",
+      "requires": ["skills/verify/SKILL.md"]
     }
   ]
 }
